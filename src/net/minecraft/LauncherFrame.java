@@ -27,7 +27,7 @@ public class LauncherFrame extends Frame {
 	public static final int VERSION = 13;
 	private static final long serialVersionUID = 1L;
 
-	private static final String VERSION_LAUNCHER = "0.0.2c";
+	private static final String VERSION_LAUNCHER = "0.0.3";
 
 	public Map<String, String> customParameters = new HashMap<String, String>();
 	public Launcher launcher;
@@ -132,7 +132,7 @@ public class LauncherFrame extends Frame {
 					+ "&password=" + URLEncoder.encode(password, "UTF-8")
 					+ "&version=" + VERSION_LAUNCHER;
 			String result = Util.excutePost(
-					"http://srv1.dcserver.ru:8050/auth/login", parameters);
+					"http://srv1.dcserver.ru:8050/auth/login_launcher", parameters);
 			// String result = getFakeResult(userName);
 			if (result == null) {
 				showError("Ошибка авторизации!");
